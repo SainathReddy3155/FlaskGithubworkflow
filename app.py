@@ -6,9 +6,15 @@ app.secret_key = 'sainath123567'
 
 @app.route('/')
 def index():
-    return {"response":"Hello New User"}
+    return {"response":"Hello User"}
 
+@app.route("/dashboard",methods=['GET','POST'])
+def dashboard():
+    return {"response":"You are in dashboard"}
 
-
+@app.route('/logout',methods=["GET","POST"])
+def logout():
+    return {"response":"successfully logged out"}
+    
 if __name__ == '__main__':
    app.run(debug=True,port=9090)
