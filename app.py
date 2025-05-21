@@ -6,7 +6,7 @@ app.secret_key = 'sainath123567'
 
 @app.route('/')
 def index():
-    return {"response":"Hello Guest"}
+    return {"response":"Hello New User"}
 
 
 
