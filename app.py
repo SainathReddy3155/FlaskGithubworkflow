@@ -12,5 +12,9 @@ def index():
 def dashboard():
     return {"response":"You are in dashboard"}
 
+@app.route('/logout',methods=["GET","POST"])
+def logout():
+    return {"response":"successfully logged out"}
+    
 if __name__ == '__main__':
    app.run(debug=True,port=9090)
