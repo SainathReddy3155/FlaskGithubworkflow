@@ -18,7 +18,12 @@ def logout():
 
 @app.route("/profile",methods=["GET","POST"])
 def profile():
-    return {"response":"This is your profile page"}
+    username=request.args.get("username")
+    login_status=request.args.get("login_status")
+    if username and login_status=="true":
+        return {"response":"This is your profile page"}
+    else:
+        return {"response":"Please login to access your profile"}
     
 if __name__ == '__main__':
    app.run(debug=True,port=9090)
