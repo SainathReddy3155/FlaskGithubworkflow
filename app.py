@@ -15,6 +15,10 @@ def dashboard():
 @app.route('/logout',methods=["GET","POST"])
 def logout():
     return {"response":"successfully logged out"}
+
+@app.route("/profile",methods=["GET","POST"])
+def profile():
+    return {"response":"This is your profile page"}
     
 if __name__ == '__main__':
    app.run(debug=True,port=9090)
