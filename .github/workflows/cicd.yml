@@ -28,5 +28,5 @@ jobs:
         pip install -r requirements.txt
     
     - name: Run Tests
-      run:  python testapp.py
+      run:  python test_cases_app.py
     
