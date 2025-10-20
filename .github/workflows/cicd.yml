@@ -27,6 +27,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Run Tests
-      run:  python test_cases_app.py
+    - name: Run unit Tests
+      run:  |
+        pytest -v --maxfail==1 --disable-warnings
+        python test_cases_app.py
     
