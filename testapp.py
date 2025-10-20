@@ -13,7 +13,7 @@ def client():
 def test_profile_sucess(client):
     response=client.get("/profile?username=sainath&login_status=true")
     data=response.get_json()
-    assert response.status_code=200
+    assert response.status_code==200
     assert data["response"]=="This is your profile page"
 
 def test_profile_failure(client):
