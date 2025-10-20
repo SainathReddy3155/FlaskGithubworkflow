@@ -20,7 +20,7 @@ def test_profile_failure(client):
     response=client.get("/profile?username=sainath&login_status=false")
     data=response.get_json()
     assert response.status_code==200
-    assert response['response'] == "Please login to access your profile"
+    assert data['response'] == "Please login to access your profile"
 
 def test_username_notfound(client):
     response=client.get("/profile?login_status=true")
