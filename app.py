@@ -8,6 +8,15 @@ app.secret_key = 'sainath123567'
 def index():
     return {"response":"Hello User"}
 
+@app.route('/login',methods=["GET","POST"])
+def login():
+    username=request.args.get("username")
+    password=request.args.get("password")
+    if username=="admin" and password=="admin123":
+        return {"response":"Login Successful"}
+    else:
+        return {"response":"Invalid Credentials"}
+
 @app.route("/dashboard",methods=['GET','POST'])
 def dashboard():
     return {"response":"You are in dashboard"}
