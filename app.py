@@ -30,9 +30,13 @@ def profile():
     username=request.args.get("username")
     login_status=request.args.get("login_status")
     if username and login_status=="true":
-        return {"response":"This is your profile page"}
+        return {"response":"Welcome to your profile page"}
     else:
         return {"response":"Please login to access your profile"}
-    
+
+@app.route('/testcases_report',methods=['POST','GET'])
+def testcasesreport():
+    return render_template('report.html')
+
 if __name__ == '__main__':
    app.run(debug=True,port=9090)
