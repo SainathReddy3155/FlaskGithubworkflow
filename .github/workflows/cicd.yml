@@ -29,6 +29,5 @@ jobs:
     
     - name: Run unit Tests
       run:  |
-        pytest -v --maxfail=1 --disable-warnings
-        python test_cases_app.py
+        pytest test_cases_app.py -v --maxfail=1 --disable-warnings
     
